@@ -1,0 +1,24 @@
+
+<mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate"></mat-progress-bar>
+
+<div *ngIf="banner" fxLayout="row" style="height:250px;">
+  <img fxFlex="100" src="{{banner}}"  >
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center" >
+  <div fxLayout="column" style="text-align:center">
+    <h1>Workshop2</h1>
+    this is second workshop!
+  </div>
+</div>
+<br>
+
+<div fxLayout="row" fxLayoutAlign="center" fxLayout.xs="column">
+  <div fxFlex="33" fxFlex.xs="100"  *ngFor="let category of categories" >
+    <div fxFlex fxLayout="column" style="text-align:center">
+        <img fxFlex  src="{{ category.image }}" >
+        <h4 fxFlex><a routerLink="/list/{{ category.id }}">{{ category.title }}</a></h4>
+    </div>
+      
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate"></mat-progress-bar>
+
+<br>
+
+<mat-list style="padding-left:16px" *ngIf="detail">
+  <img  src="{{ detail.image }}">
+  <h1 matLine>{{ detail.title }}</h1>
+  <p>{{ detail.description }}</p>
+</mat-list>

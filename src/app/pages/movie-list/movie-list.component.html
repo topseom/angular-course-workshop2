@@ -1,0 +1,10 @@
+<mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate"></mat-progress-bar>
+
+<mat-list>
+  <h1 mat-subheader>List Movie</h1>
+  <mat-list-item *ngFor="let item of list">
+    <img matListAvatar src="{{ item.image }}" >
+    <h1 matLine><a routerLink="/movie/{{ item.id }}">{{ item.title }}</a></h1>
+    <p matLine>{{ item.intro}}</p>
+  </mat-list-item>
+</mat-list>
